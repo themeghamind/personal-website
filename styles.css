@@ -3,49 +3,55 @@ body,
 html {
     height: 100%;
     font-family: 'Cormorant', serif;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: lighter;
     text-align: center;
     line-height: 1.25;
     color: black;
     background-color: #D1F1FF;
+    background-image: url('cloud1.jpg'), url('cloud2.jpg'), url('cloud3.jpg'), url('cloud4.jpg'), url('cloud5.jpg'), url('cloud6.jpg'), url('cloud7.jpg'), url('cloud8.jpg'), url('cloud9.jpg');
+    background-position: 16% 10%, 84% 35%, 22% 61%, 80% 85%, 14% 110%, 87% 137%, 87% -22%, 20% 160%, 87% 200%;
+    background-repeat: no-repeat;
+    background-size: 172px 172px, 136px 136px, 136px 136px, 172px 172px, 172px 172px, 136px 136px, 172px 172px, 136px 136px, 172px 172px;
     margin: 0;
     margin-top: 40px;
-    /* This removes any default margin around the <body> */
     padding: 0;
-    /* This removes any default padding around the <body> */
 }
 
 h1 {
     font-weight: normal;
     margin-bottom: 0;
-    font-size: 60px;
-    /* Removes space below the h1 tag */
+    font-size: 72px;
 }
 
 h2 {
     font-weight: lighter;
-    font-size: 20px;
-    margin-top: 0;
-    /* Removes space above the h2 tag */
+    font-size: 22px;
+    margin-top: 10px;
     margin-bottom: 0;
-    /* Adjust this as needed, or set to 0 if you want no space */
 }
 
 p {
-    /* Adds space above the first paragraph. Adjust the value as needed. */
-    /* If you only want to target the first paragraph, you can use the :first-of-type pseudo-class */
-    margin-top: 20px;
+    margin-top: 120px;
     font-weight: lighter;
 }
 
 p:first-of-type {
-    margin-top: 60px;
-    /* Adds space only above the first paragraph */
+    margin-top: 120px;
 }
 
-p:nth-of-type(3),
-p:nth-of-type(4) {
-    margin-top: 80px;
-    /* Adds space only above the first paragraph */
+p:nth-of-type(2) {
+    margin-top: 20px;
+}
+
+p:nth-of-type(7) {
+    font-size: 10px;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: grey;
 }
