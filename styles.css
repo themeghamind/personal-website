@@ -1,0 +1,21 @@
+body,
+html {
+    h1 {
+        font-weight: lighter;
+        margin: 50px
+    }
+    h2 {
+        font-weight: lighter;
+    }
+    height: 100%;
+    margin: 0;
+    font-family: 'Source Serif 4',
+    'Source Serif Pro',
+    serif;
+    font-size: 18px;
+    font-weight: lighter;
+    text-align: center;
+    line-height: 1.25;
+    color: black;
+    background-color: #D1F1FF
+}
