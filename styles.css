@@ -9,7 +9,7 @@ html {
     line-height: 1.25;
     color: black;
     background-color: #D1F1FF;
-    background-image: url('cloud1.jpg'), url('cloud2.jpg'), url('cloud3.jpg'), url('cloud4.jpg'), url('cloud5.jpg'), url('cloud6.jpg'), url('cloud7.jpg'), url('cloud8.jpg'), url('cloud9.jpg');
+    background-image: url('images/cloud1.jpg'), url('images/cloud2.jpg'), url('images/cloud3.jpg'), url('images/cloud4.jpg'), url('images/cloud5.jpg'), url('images/cloud6.jpg'), url('images/cloud7.jpg'), url('images/cloud8.jpg'), url('images/cloud9.jpg');
     background-position: 16% 10%, 84% 35%, 22% 61%, 80% 85%, 14% 110%, 87% 137%, 87% -22%, 20% 160%, 87% 200%;
     background-repeat: no-repeat;
     background-size: 172px 172px, 136px 136px, 136px 136px, 172px 172px, 172px 172px, 136px 136px, 172px 172px, 136px 136px, 172px 172px;
