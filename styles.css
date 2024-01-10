@@ -10,6 +10,7 @@ html {
     color: black;
     background-color: #D1F1FF;
     margin: 0;
+    margin-top: 40px;
     /* This removes any default margin around the <body> */
     padding: 0;
     /* This removes any default padding around the <body> */
@@ -18,6 +19,7 @@ html {
 h1 {
     font-weight: normal;
     margin-bottom: 0;
+    font-size: 60px;
     /* Removes space below the h1 tag */
 }
 
@@ -38,27 +40,12 @@ p {
 }
 
 p:first-of-type {
-    margin-top: 20px;
+    margin-top: 60px;
     /* Adds space only above the first paragraph */
 }
 
-
-/* body,
-html {
-    h1 {
-        font-weight: lighter;
-    }
-    h2 {
-        font-weight: lighter;
-    }
-    height: 100%;
-    font-family: 'Source Serif 4',
-    'Source Serif Pro',
-    serif;
-    font-size: 18px;
-    font-weight: lighter;
-    text-align: center;
-    line-height: 1.25;
-    color: black;
-    background-color: #D1F1FF
-} */
+p:nth-of-type(3),
+p:nth-of-type(4) {
+    margin-top: 80px;
+    /* Adds space only above the first paragraph */
+}
