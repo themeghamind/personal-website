@@ -8,6 +8,7 @@ type Metadata = {
   image?: string
 }
 
+
 function parseFrontmatter(fileContent: string) {
   let frontmatterRegex = /---\s*([\s\S]*?)\s*---/
   let match = frontmatterRegex.exec(fileContent)
@@ -49,42 +50,29 @@ function getMDXData(dir) {
   })
 }
 
-export function getBlogPosts() {
-  return getMDXData(path.join(process.cwd(), 'app', 'blog', 'posts'))
-}
+export type { Post } from './lib/substack';
+export { fetchSubstackPosts as getBlogPosts } from './lib/substack'
+
 
 export function formatDate(date: string, includeRelative = false) {
-  let currentDate = new Date()
   if (!date.includes('T')) {
-    date = `${date}T00:00:00`
+    date = `${date}T00:00:00`;
   }
-  let targetDate = new Date(date)
+  const targetDate = new Date(date);
+  const now = new Date();
 
-  let yearsAgo = currentDate.getFullYear() - targetDate.getFullYear()
-  let monthsAgo = currentDate.getMonth() - targetDate.getMonth()
-  let daysAgo = currentDate.getDate() - targetDate.getDate()
+  const mm = String(targetDate.getMonth() + 1).padStart(2, '0');
+  const dd = String(targetDate.getDate()).padStart(2, '0');
+  const yyyy = String(targetDate.getFullYear());
+  const formatted = `${mm}-${dd}-${yyyy}`;
 
-  let formattedDate = ''
+  const diffMs = now.getTime() - targetDate.getTime();
+  const diffDays = Math.floor(diffMs / 86_400_000);
+  let relative = 'Today';
+  if (diffDays >= 365) relative = `${Math.floor(diffDays / 365)}y ago`;
+  else if (diffDays >= 30) relative = `${Math.floor(diffDays / 30)}mo ago`;
+  else if (diffDays >= 1) relative = `${diffDays}d ago`;
 
-  if (yearsAgo > 0) {
-    formattedDate = `${yearsAgo}y ago`
-  } else if (monthsAgo > 0) {
-    formattedDate = `${monthsAgo}mo ago`
-  } else if (daysAgo > 0) {
-    formattedDate = `${daysAgo}d ago`
-  } else {
-    formattedDate = 'Today'
-  }
-
-  let fullDate = targetDate.toLocaleString('en-us', {
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric',
-  })
-
-  if (!includeRelative) {
-    return fullDate
-  }
-
-  return `${fullDate} (${formattedDate})`
+  return includeRelative ? `${formatted} (${relative})` : formatted;
 }
+

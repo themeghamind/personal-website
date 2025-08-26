@@ -1,4 +1,8 @@
 @import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap');
+@theme {
+  --font-instrument: 'Instrument Serif', serif;
+}
 
 ::selection {
   background-color: #47a3f3;
@@ -29,9 +33,10 @@
   }
 }
 
-html {
+/* html {
   min-width: 360px;
-}
+  cursor: url('/assets/website-cursor.png') 2 2, auto;
+} */
 
 .prose .anchor {
   @apply absolute invisible no-underline;
