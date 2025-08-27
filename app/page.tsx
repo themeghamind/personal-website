@@ -1,4 +1,5 @@
 import { PageButtons } from 'app/components/pagebuttons'
+import Footer from 'app/components/footer'
 
 export default function Page() {
   return (
@@ -50,7 +51,7 @@ export default function Page() {
             name: "writing"
           },
           {
-            href: '/side-quests', 
+            href: '/not-found', 
             name: "sidequests"
           },
           {

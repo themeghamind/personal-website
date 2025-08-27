@@ -2,10 +2,10 @@ import './global.css'
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
-import NavGate from './components/navgate'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { baseUrl } from './sitemap'
+import Footer from './components/footer'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
