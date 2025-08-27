@@ -51,7 +51,7 @@ export default function Page() {
             name: "writing"
           },
           {
-            href: '/sidequests', 
+            href: '/not-found', 
             name: "sidequests"
           },
           {
