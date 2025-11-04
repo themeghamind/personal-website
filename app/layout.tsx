@@ -10,7 +10,7 @@ import Footer from './components/footer'
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Megha&apos;s Personal Website',
+    default: `Megha's Personal Website`,
     template: '%s | Next.js Portfolio Starter',
   },
   description: 'This is my portfolio.',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: 'My Portfolio',
     description: 'This is my portfolio.',
     url: baseUrl,
-    siteName: 'Megha&apos;s Personal Website',
+    siteName: `Megha's Personal Website`,
     locale: 'en_US',
     type: 'website',
   },
