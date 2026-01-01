@@ -11,8 +11,6 @@ export type Post = {
 
 const FEEDS = [
   'https://bartthoughts.substack.com/feed',
-  'https://meghajain.substack.com/feed',
-  'https://sugarnspice.substack.com/feed',
 ];
 
 const parser = new XMLParser({
