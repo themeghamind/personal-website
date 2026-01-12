@@ -11,6 +11,8 @@ export type Post = {
 
 const FEEDS = [
   'https://bartthoughts.substack.com/feed',
+  'https://meghajain.substack.com/feed',
+  'https://sugarnspice.substack.com/feed'
 ];
 
 const parser = new XMLParser({
@@ -24,8 +26,12 @@ function toArray<T>(x: T | T[] | undefined): T[] {
   return Array.isArray(x) ? x : [x];
 }
 
-function isComingSoon(title: unknown) {
-  return String(title ?? '').trim().toLowerCase() === 'coming soon';
+function isComingSoon(title: string) {
+  return (title ?? '').trim().toLowerCase() === 'coming soon';
+}
+
+function isYearlyReview(title: string) {
+  return (title ?? '').trim().toLowerCase().includes('a pair of heels')
 }
 
 export async function fetchSubstackPosts(): Promise<Post[]> {
@@ -57,7 +63,7 @@ export async function fetchSubstackPosts(): Promise<Post[]> {
 
   // de-dupe and sort newest → oldest
   return Array.from(new Map(all.map((p) => [p.slug, p])).values())
-  .filter(p => !isComingSoon(p.metadata.title))
+  .filter(p => !isComingSoon(p.metadata.title) && !isYearlyReview(p.metadata.title))
   .sort((a, b) => b.metadata.publishedAt.localeCompare(a.metadata.publishedAt));
 
 }
