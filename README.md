@@ -1,5 +1,3 @@
 # Megha's portfolio
 
-This was made using a porfolio site template complete with a blog. Here's a link to a demo of the original:
-
-https://portfolio-blog-starter.vercel.app
+Personal website made using a NextJS blog template. I like calling it "Megha's cloud" because Megha means rain cloud and I happen to be a cloud engineer!
