@@ -33,9 +33,6 @@ export default function Page() {
         </input>
         <span className="pointer-events-none absolute left-2 top-1/2 -translate-y-1/2 w-[1px] h-5 bg-black animate-blink peer-focus:opacity-0"></span>
       </div> */}
-      <p className="text-2xl [font-family:var(--font-instrument)]">
-        {'feel free to explore:'}
-      </p>
       <div className="my-8">
         <PageButtons pages={[
           {
