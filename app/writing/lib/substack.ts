@@ -14,6 +14,18 @@ const FEEDS = [
   'https://meghajain.substack.com/feed',
 ];
 
+// Posts published outside Substack
+const EXTERNAL_POSTS: Post[] = [
+  {
+    slug: 'https://www.crusoe.ai/resources/blog/how-green-is-crusoes-inference-engine',
+    metadata: {
+      title: "How green is Crusoe's inference engine?",
+      publishedAt: '2026-10-09T12:00:00.000Z',
+      summary: 'Software stack optimization on identical hardware reduced energy consumption per token by ~27%.',
+    },
+  },
+];
+
 const parser = new XMLParser({
   ignoreAttributes: false,
   removeNSPrefix: false,
@@ -34,7 +46,7 @@ function isYearlyReview(title: string) {
 }
 
 export async function fetchSubstackPosts(): Promise<Post[]> {
-  const all: Post[] = [];
+  const all: Post[] = [...EXTERNAL_POSTS];
 
   await Promise.all(
     FEEDS.map(async (url) => {
