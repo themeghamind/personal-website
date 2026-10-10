@@ -12,6 +12,7 @@ export type Post = {
 const FEEDS = [
   'https://bartthoughts.substack.com/feed',
   'https://meghajain.substack.com/feed',
+  'https://electronsnbits.substack.com/feed',
 ];
 
 // Posts published outside Substack
